@@ -4,4 +4,8 @@
     <string name="clave">Clave</string>
     <string name="iniciar">Iniciar</string>
     <string name="registrar">Registrar</string>
+    <string name="nombre_usuario_registrar">Usuario</string>
+    <string name="clave_registrar">Clave</string>
+    <string name="email_registrar">Email</string>
+    <string name="boton_registrar">Registrar</string>
 </resources>
