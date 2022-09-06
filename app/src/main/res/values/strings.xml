@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Actividad1</string>
+    <string name="nombre_usuario">Usuario</string>
+    <string name="clave">Clave</string>
+    <string name="iniciar">Iniciar</string>
+    <string name="registrar">Registrar</string>
+</resources>
