@@ -23,7 +23,7 @@
         android:text="@string/nombre_usuario" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/txtUsuario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -40,7 +40,7 @@
         android:text="@string/clave" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/txtClave"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
@@ -55,14 +55,15 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnIniciar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:onClick="Iniciar"
             android:text="@string/iniciar" />
 
         <Button
-            android:id="@+id/registrar"
+            android:id="@+id/btnRegistrar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
