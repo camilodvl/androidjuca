@@ -30,7 +30,8 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text=""
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:autofillHints="" />
 
     <TextView
         android:id="@+id/textView5"
@@ -46,7 +47,8 @@
         android:layout_weight="1"
         android:ems="10"
         android:inputType="textPassword"
-        tools:ignore="SpeakableTextPresentCheck" />
+        tools:ignore="SpeakableTextPresentCheck"
+        android:importantForAutofill="no" />
 
     <LinearLayout
         android:layout_width="match_parent"
