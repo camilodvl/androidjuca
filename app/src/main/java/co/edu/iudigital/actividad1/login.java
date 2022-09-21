@@ -8,6 +8,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class login extends AppCompatActivity {
     Button registrar; //Se crea el objeto tipo botón
@@ -41,6 +44,23 @@ public class login extends AppCompatActivity {
             usuario.setError("Ingrese un usuario");
         } else if (pass.equals("")) {
             clave.setError("Ingrese la clave");
+        } else {
+            try {
+                List < Usuario > usuariosBd = Usuario.find(Usuario.class, "usuario='" + user + "'", null);
+                if (!usuariosBd.isEmpty()) {
+                    Usuario usuarioRetorno = usuariosBd.get(0);
+                    if (usuarioRetorno.getUsuario().equals(user) & usuarioRetorno.getContrasena().equals(pass)) {
+                        Toast.makeText(getApplicationContext(), "Usuario encontrado", Toast.LENGTH_LONG).show();
+                    } else {
+                        Toast.makeText(getApplicationContext(), "Usuario o clave incorrecta", Toast.LENGTH_LONG).show();
+                    }
+                } else {
+                    Toast.makeText(getApplicationContext(), "Usuario no encontrado", Toast.LENGTH_LONG).show();
+                }
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), "Ha ocurrido un error", Toast.LENGTH_LONG).show();
+            }
+
         }
     }
 }

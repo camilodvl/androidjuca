@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class Registro extends AppCompatActivity {
 
@@ -32,6 +33,19 @@ public class Registro extends AppCompatActivity {
             password.setError("Ingrese el password");
         } else if (emailV.equals("")) {
             email.setError("Ingrese el email");
+        }else{
+            try {
+                Usuario usuarioBd = new Usuario(usuarioV,passwordV,emailV);
+                usuarioBd.save();
+                Toast.makeText(getApplicationContext(),"Usuario Creado", Toast.LENGTH_LONG).show();
+                usuario.setText("");
+                password.setText("");
+                email.setText("");
+                finish();
+            }catch (Error e){
+                Toast.makeText(getApplicationContext(),"Error al crear el usuario", Toast.LENGTH_LONG).show();
+            }
+
         }
     }
 }
