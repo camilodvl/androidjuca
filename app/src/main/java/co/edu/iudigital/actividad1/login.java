@@ -51,6 +51,9 @@ public class login extends AppCompatActivity {
                     Usuario usuarioRetorno = usuariosBd.get(0);
                     if (usuarioRetorno.getUsuario().equals(user) & usuarioRetorno.getContrasena().equals(pass)) {
                         Toast.makeText(getApplicationContext(), "Usuario encontrado", Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(view.getContext(), Inventario.class); //getcontext obtiene la actividad actual
+                        startActivity(i);
+                        finish();
                     } else {
                         Toast.makeText(getApplicationContext(), "Usuario o clave incorrecta", Toast.LENGTH_LONG).show();
                     }

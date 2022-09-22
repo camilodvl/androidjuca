@@ -9,4 +9,6 @@
     <string name="email_registrar">Email</string>
     <string name="boton_registrar">Registrar</string>
     <string name="juca_logo">Juca Logo</string>
+    <string name="registrar_inventario">Registrar Inventario</string>
+    <string name="borrar_inventario">Eliminar Inventario</string>
 </resources>

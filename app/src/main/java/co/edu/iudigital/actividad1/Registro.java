@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class Registro extends AppCompatActivity {
 
     EditText usuario, password, email;
@@ -33,17 +35,24 @@ public class Registro extends AppCompatActivity {
             password.setError("Ingrese el password");
         } else if (emailV.equals("")) {
             email.setError("Ingrese el email");
-        }else{
+        } else {
+
             try {
-                Usuario usuarioBd = new Usuario(usuarioV,passwordV,emailV);
-                usuarioBd.save();
-                Toast.makeText(getApplicationContext(),"Usuario Creado", Toast.LENGTH_LONG).show();
-                usuario.setText("");
-                password.setText("");
-                email.setText("");
-                finish();
-            }catch (Error e){
-                Toast.makeText(getApplicationContext(),"Error al crear el usuario", Toast.LENGTH_LONG).show();
+                List < Usuario > usuariosBd = Usuario.find(Usuario.class, "usuario='" + usuarioV + "'", null);
+                if (usuariosBd.size() > 0) {
+                    Toast.makeText(getApplicationContext(), "El usuario ya existe", Toast.LENGTH_LONG).show();
+                } else {
+                    Usuario usuarioBd = new Usuario(usuarioV, passwordV, emailV);
+                    usuarioBd.save();
+                    Toast.makeText(getApplicationContext(), "Usuario Creado", Toast.LENGTH_LONG).show();
+                    usuario.setText("");
+                    password.setText("");
+                    email.setText("");
+                    finish();
+                }
+
+            } catch (Exception e) {
+                Toast.makeText(getApplicationContext(), "Error al crear el usuario", Toast.LENGTH_LONG).show();
             }
 
         }
