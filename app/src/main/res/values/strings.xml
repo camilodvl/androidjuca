@@ -9,6 +9,8 @@
     <string name="email_registrar">Email</string>
     <string name="boton_registrar">Registrar</string>
     <string name="juca_logo">Juca Logo</string>
-    <string name="registrar_inventario">Registrar Inventario</string>
-    <string name="borrar_inventario">Eliminar Inventario</string>
+    <string name="registrar_estudiante">Registrar Estudiante</string>
+    <string name="borrar_estudiante">Eliminar Estudiante</string>
+    <string name="nombre_estudiante">Nombre Estudiante</string>
+    <string name="cedula_estudiante">Cedula Estudiante</string>
 </resources>

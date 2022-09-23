@@ -11,15 +11,18 @@
         android:id="@+id/btnIngresarInventario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/registrar_inventario" />
+        android:onClick="RegistrarEstudianteActividad"
+        android:text="@string/registrar_estudiante" />
 
     <Button
         android:id="@+id/bntEliminarInventario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/borrar_inventario" />
+        android:text="@string/borrar_estudiante" />
 
     <ListView
+        android:id="@+id/lvEstudiantes"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
+
 </LinearLayout>
