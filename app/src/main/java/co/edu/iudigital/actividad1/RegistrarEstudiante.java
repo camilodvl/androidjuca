@@ -8,6 +8,8 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import java.util.List;
+
 public class RegistrarEstudiante extends AppCompatActivity {
     EditText nombreEstudiante, cedulaEstudiante;
     @Override
@@ -28,16 +30,22 @@ public class RegistrarEstudiante extends AppCompatActivity {
         }else if(cedulaEstudiante.toString().equals("")){
             cedulaEstudiante.setError("Ingrese la cedula");
         }else {
-            Estudiante estudiante = new Estudiante(cedulaE, nombreE);
-            try {
-                estudiante.save();
-                Toast.makeText(getApplicationContext(), "Estudiante registrado", Toast.LENGTH_LONG).show();
-                Intent i = new Intent(view.getContext(), Inventario.class); //getcontext obtiene la actividad actual
-                startActivity(i);
-                finish();
-            }catch (Exception e){
-                Toast.makeText(getApplicationContext(), "Ha ocurrido un error", Toast.LENGTH_LONG).show();
+            List<Estudiante> estudianteRetornado = Estudiante.find(Estudiante.class, "cedula='"+cedulaE+"'", null);
+            if(estudianteRetornado.size()>0){
+                Toast.makeText(getApplicationContext(), "Cedula Existente", Toast.LENGTH_LONG).show();
+            }else{
+                Estudiante estudiante = new Estudiante(cedulaE, nombreE);
+                try {
+                    estudiante.save();
+                    Toast.makeText(getApplicationContext(), "Estudiante registrado", Toast.LENGTH_LONG).show();
+                    Intent i = new Intent(view.getContext(), Inventario.class); //getcontext obtiene la actividad actual
+                    startActivity(i);
+                    finish();
+                }catch (Exception e){
+                    Toast.makeText(getApplicationContext(), "Ha ocurrido un error", Toast.LENGTH_LONG).show();
+                }
             }
+
         }
 
 

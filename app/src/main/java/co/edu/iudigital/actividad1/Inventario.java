@@ -36,4 +36,10 @@ public class Inventario extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+    public void BorrarEstudiante(View view){
+        Intent i = new Intent(view.getContext(), EliminarEstudiante.class); //getcontext obtiene la actividad actual
+        startActivity(i);
+        finish();
+    }
 }

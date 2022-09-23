@@ -18,6 +18,7 @@
         android:id="@+id/bntEliminarInventario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:onClick="BorrarEstudiante"
         android:text="@string/borrar_estudiante" />
 
     <ListView
