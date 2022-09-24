@@ -13,6 +13,7 @@ import java.util.List;
 
 public class Inventario extends AppCompatActivity {
     ListView lista;
+    EstudiantesAdapter miAdaptador;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,8 +27,8 @@ public class Inventario extends AppCompatActivity {
             }
 
             lista=findViewById(R.id.lvEstudiantes);
-            ArrayAdapter <String> adapter= new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, nombreEstudiantes);
-            lista.setAdapter(adapter);
+            miAdaptador = new EstudiantesAdapter(this, R.layout.estudiantes_adapter_layout, estudiantes);
+            lista.setAdapter(miAdaptador);
         }
     }
 
