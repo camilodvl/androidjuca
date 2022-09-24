@@ -15,6 +15,13 @@
         android:text="@string/registrar_estudiante" />
 
     <Button
+        android:id="@+id/btnEditarEstudiante"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:onClick="EditarEstudiante"
+        android:text="@string/editar_estudiante" />
+
+    <Button
         android:id="@+id/bntEliminarInventario"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

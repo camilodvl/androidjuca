@@ -13,4 +13,5 @@
     <string name="borrar_estudiante">Eliminar Estudiante</string>
     <string name="nombre_estudiante">Nombre Estudiante</string>
     <string name="cedula_estudiante">Cedula Estudiante</string>
+    <string name="editar_estudiante">Editar Estudiante</string>
 </resources>

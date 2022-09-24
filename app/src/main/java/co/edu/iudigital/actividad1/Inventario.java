@@ -43,4 +43,10 @@ public class Inventario extends AppCompatActivity {
         startActivity(i);
         finish();
     }
+
+    public void EditarEstudiante(View view){
+        Intent i = new Intent(view.getContext(), EditarEstudiante.class); //getcontext obtiene la actividad actual
+        startActivity(i);
+        finish();
+    }
 }
