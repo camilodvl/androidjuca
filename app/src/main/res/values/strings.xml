@@ -14,4 +14,6 @@
     <string name="nombre_estudiante">Nombre Estudiante</string>
     <string name="cedula_estudiante">Cedula Estudiante</string>
     <string name="editar_estudiante">Editar Estudiante</string>
+    <string name="obtener_hora">Obtener hora</string>
+    <string name="hora_amsterdam">Hora en Amsterdam</string>
 </resources>

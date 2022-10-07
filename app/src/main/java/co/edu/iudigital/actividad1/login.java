@@ -34,7 +34,15 @@ public class login extends AppCompatActivity {
             }
         });
 
+
+
     }
+
+    public void ObtenerHora(View view){
+        Intent i = new Intent(view.getContext(), Time.class); //getcontext obtiene la actividad actual
+        startActivity(i);
+    }
+
     //se crea la funcion a ejecutar por el botón ingresar, esta función se asigna al botón en el diseño, al evento onClick
     public void Iniciar(View view) {
         String user = usuario.getText().toString();
@@ -66,4 +74,5 @@ public class login extends AppCompatActivity {
 
         }
     }
+
 }
